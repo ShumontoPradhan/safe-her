@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 // import { FaExclamationCircle, FaMap } from 'react-icons/fa';
 
 const HomePage = () => {
@@ -10,13 +10,20 @@ const HomePage = () => {
         <div className="container text-white py-5">
           <h1 className="display-4 fw-bold mb-3">Women Safety Platform</h1>
           <p className="lead fw-bold mb-4">
-            Empowering women through data-driven safety solutions in Chhattisgarh
+            Empowering women through data-driven safety solutions in
+            Chhattisgarh
           </p>
           <div className="d-flex justify-content-center gap-3 flex-wrap">
-            <Link to="/report" className="btn btn-primary d-flex align-items-center gap-2 me-4 mb-2">
+            <Link
+              to="/report"
+              className="btn btn-primary d-flex align-items-center gap-2 me-4 mb-2"
+            >
               <i className="fas fa-exclamation-circle"></i> Report Incident
             </Link>
-            <Link to="/dashboard" className="btn btn-secondary d-flex align-items-center gap-2 mb-2">
+            <Link
+              to="/dashboard"
+              className="btn btn-secondary d-flex align-items-center gap-2 mb-2"
+            >
               <i className="fas fa-map"></i> View Safety Map
             </Link>
           </div>
@@ -27,7 +34,9 @@ const HomePage = () => {
       <section className="py-5">
         <div className="container text-center">
           <h2 className="fw-bold mb-3">Our Safety Features</h2>
-          <p className="text-muted">Comprehensive tools designed for your protection</p>
+          <p className="text-muted">
+            Comprehensive tools designed for your protection
+          </p>
           <div className="row g-4 mt-4">
             {[
               {
@@ -64,7 +73,9 @@ const HomePage = () => {
       <section className="py-5 bg-light">
         <div className="container text-center">
           <h2 className="fw-bold mb-3">Safety in Numbers</h2>
-          <p className="text-muted">Understanding the landscape of women's safety in our state</p>
+          <p className="text-muted">
+            Understanding the landscape of women's safety in our state
+          </p>
           <div className="row g-4 mt-4">
             {[
               { stat: "1,200+", desc: "Incidents reported monthly" },
@@ -90,7 +101,8 @@ const HomePage = () => {
             <div className="col-md-6">
               <h2 className="fw-bold mb-4">Interactive Safety Map</h2>
               <p>
-                Our real-time safety map shows reported incidents, safe routes, and nearby help centers across Chhattisgarh...
+                Our real-time safety map shows reported incidents, safe routes,
+                and nearby help centers across Chhattisgarh...
               </p>
               <Link to="/dashboard" className="btn btn-primary mt-3">
                 Explore the Map
@@ -172,7 +184,8 @@ const HomePage = () => {
           <div className="row g-4">
             {[
               {
-                quote: "The safety map helped me avoid a high-risk area in Raipur...",
+                quote:
+                  "The safety map helped me avoid a high-risk area in Raipur...",
                 name: "Priya Sharma",
                 role: "College Student, Raipur",
                 img: "/images/img1.jpg",
@@ -184,7 +197,8 @@ const HomePage = () => {
                 img: "/images/img2.jpeg",
               },
               {
-                quote: "The community feature helped me find women to travel with...",
+                quote:
+                  "The community feature helped me find women to travel with...",
                 name: "Meena Yadav",
                 role: "Nurse, Durg",
                 img: "/images/img3.jpeg",
@@ -194,7 +208,12 @@ const HomePage = () => {
                 <div className="testimonial-card p-4 bg-white shadow-sm h-100">
                   <p>"{t.quote}"</p>
                   <div className="d-flex align-items-center mt-3">
-                    <img src={t.img} alt={t.name} className="rounded-circle me-3" width="50" />
+                    <img
+                      src={process.env.PUBLIC_URL + t.img}
+                      alt={t.name}
+                      className="rounded-circle me-3"
+                      width="50"
+                    />
                     <div>
                       <h6 className="mb-0">{t.name}</h6>
                       <small className="text-muted">{t.role}</small>
@@ -206,12 +225,13 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
       {/* CTA */}
       <section className="py-5 bg-primary text-white text-center">
         <div className="container">
           <h2 className="fw-bold mb-4">Join Our Safety Network Today</h2>
-          <p className="lead mb-4">Together, we can make Chhattisgarh safer for all women</p>
+          <p className="lead mb-4">
+            Together, we can make Chhattisgarh safer for all women
+          </p>
           <div className="d-flex justify-content-center gap-3 flex-wrap">
             <Link to="/register" className="btn btn-light btn-lg px-4">
               Register Now
